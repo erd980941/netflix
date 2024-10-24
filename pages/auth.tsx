@@ -86,10 +86,10 @@ const auth = () => {
                         <button className='bg-red-700 py-3 text-white rounded-md w-full mt-10 hover:bg-red-800 transition' onClick={variant === 'login' ? login : register} >{variant === 'login'?'Login':'Sing Up'}</button>
 
                         <div className='flex flex-row items-center gap-4 mt-10 justify-center'>
-                            <div className='flex text-red-600 w-10 h-10 rounded-full items-center justify-center cursor-pointer bg-white' >
+                            <div onClick={()=>signIn('google',{callbackUrl:'/profiles'})} className='flex text-red-600 w-10 h-10 rounded-full items-center justify-center cursor-pointer bg-white' >
                                 <FaGoogle size={30} ></FaGoogle>
                             </div>
-                            <div className='flex text-black w-10 h-10 rounded-full items-center justify-center cursor-pointer bg-white' >
+                            <div  onClick={()=>signIn('github',{callbackUrl:'/profiles'})} className='flex text-black w-10 h-10 rounded-full items-center justify-center cursor-pointer bg-white' >
                                 <FaGithub size={30} ></FaGithub>
                             </div>
                         </div>
