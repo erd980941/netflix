@@ -1,8 +1,8 @@
 import fetcher from "@/libs/fetcher";
 import useSWR from "swr";
 
-const useMovieList = ()=>{
-    const{data,error,isValidating} = useSWR('/api/movie',fetcher, {
+const useFavoriMovie = ()=>{
+    const{data,error,isValidating} = useSWR('/api/favoriteList',fetcher, {
         revalidateIfStale:false,
         revalidateOnFocus:false,
         revalidateOnReconnect:false,
@@ -15,4 +15,4 @@ const useMovieList = ()=>{
     }
 }
 
-export default useMovieList;
+export default useFavoriMovie;
