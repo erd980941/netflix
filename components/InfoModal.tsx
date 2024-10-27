@@ -4,7 +4,6 @@ import React, { useCallback, useEffect, useState } from 'react'
 import { XMarkIcon } from '@heroicons/react/24/solid'
 import PlayButton from './PlayButton';
 import FavoriButton from './FavoriButton';
-
 interface InfoModalProps{
     visible?: boolean;
     onClose:any;
@@ -67,6 +66,9 @@ const InfoModal:React.FC<InfoModalProps>=({visible, onClose})=> {
               </div>
 
             </div>
+
+         
+
           </div>
 
           <div className='px-12 py-10'>
@@ -86,9 +88,21 @@ const InfoModal:React.FC<InfoModalProps>=({visible, onClose})=> {
             <div className='text-white text-lg font-semibold mt-10'>
                  {data?.description}
             </div>
+
+        
           </div>
-        </div>   
-      </div>   
+
+
+      
+
+        </div>
+      
+      </div>
+
+            
+
+    
+       
     </div>
   )
 }
